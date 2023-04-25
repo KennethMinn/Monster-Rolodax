@@ -1,6 +1,11 @@
 import React from "react";
+import { ChangeEventHandler } from "react";
 
-const SearchBox = ({ onSearchChange }) => {
+interface IonSearchChangeProps {
+  onSearchChange: ChangeEventHandler<HTMLInputElement>;
+}
+
+const SearchBox = ({ onSearchChange }: IonSearchChangeProps) => {
   return (
     <div className=" d-flex justify-content-center align-items-center">
       <input
