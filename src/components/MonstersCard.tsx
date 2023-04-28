@@ -1,6 +1,11 @@
 import React from "react";
+import { Monster } from "../App";
 
-const MonstersCard = ({ filteredMonsters }) => {
+type FilterMonster = {
+  filteredMonsters: Monster[];
+};
+
+const MonstersCard = ({ filteredMonsters }: FilterMonster) => {
   return (
     <div className="row mb-5">
       {filteredMonsters.map(({ id, name, email }) => (
